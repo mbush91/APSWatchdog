@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.mikebush.apswatchdog" >
+    package="org.mikebush.apswatchdog">
 
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -10,18 +13,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.APSWatchdog" >
+        android:theme="@style/Theme.APSWatchdog">
 
         <receiver
             android:name=".AlarmReceiver"
             android:enabled="true"
-            android:exported="true" >
-        </receiver>
-
+            android:exported="true" />
         <receiver
             android:name=".APSReceiver"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="info.nightscout.androidaps.status" />
             </intent-filter>
@@ -29,7 +30,7 @@
 
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

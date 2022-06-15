@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_alarm_black_24dp.xml" value="0.164" />
+        <entry key="app/src/main/res/layout/activity_alarm.xml" value="0.12234042553191489" />
+        <entry key="app/src/main/res/layout/activity_apsalarm.xml" value="0.12234042553191489" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/content_alarm.xml" value="0.10015109447722742" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.12234042553191489" />
       </map>
     </option>
   </component>

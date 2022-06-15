@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                     List<PackageInfo> packages = pm.getInstalledPackages(0);
 
                     for (PackageInfo p : packages) {
-                        Log.d("TEST",p.packageName);
+                        APSWatchdogLogger.d("TEST",p.packageName);
                     }
                 } catch (Exception e) {
                     Toast.makeText(MainActivity.this, "There is no package available in android", Toast.LENGTH_LONG).show();

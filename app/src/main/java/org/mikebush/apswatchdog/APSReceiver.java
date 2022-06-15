@@ -16,24 +16,24 @@ import java.util.Date;
 
 public class APSReceiver extends BroadcastReceiver {
 
+    public static long wdTime = 12L * 60L; // Seconds
+
     private static String tag = "APSWatchdog.APSReceiver";
     public static Date lastReceived;
-    public static long wdTime = 15; // Seconds
-    public static PendingIntent APSAlarm;
 
     @Override
     public void onReceive(Context context, Intent intent) {
         lastReceived = Calendar.getInstance().getTime();
 
         String msg = "Received Intent at: "+ APSReceiver.lastReceived.toString();
-        Log.d(tag, msg );
+        APSWatchdogLogger.d(tag, msg );
         setAlarm(context);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void setAlarm(Context context)
     {
-        Log.d(tag, "Setup Alarm" );
+        APSWatchdogLogger.d(tag, "Setup Alarm" );
         AlarmManager am =( AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         assert am != null;
         Intent i = new Intent(context, AlarmReceiver.class);
