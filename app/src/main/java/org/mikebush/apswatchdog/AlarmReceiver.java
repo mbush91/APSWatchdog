@@ -26,7 +26,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         Toast.makeText(context,"AndroidAPS Not Running!",Toast.LENGTH_LONG);
 
-        showAlarmNotification(context, "ATITLE", "AMESSAGE", 0);
+        showAlarmNotification(context, "APSWatchdog", "No AndroidAPS Activity!", 0);
 
     }
 
